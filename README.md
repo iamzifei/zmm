@@ -1,5 +1,7 @@
 # zmm skills
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2T024VDBG)
+
 两套 AI 技能：**做内容**和**看生意**。
 
 装完之后，你用人话说你卡在哪，它会挑对的那个来处理。**只需要记一条命令：`/zmm`。**
