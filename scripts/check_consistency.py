@@ -21,7 +21,7 @@ from pathlib import Path
 
 CONTENT = {"zmm", "zmm-topic", "zmm-script", "zmm-title", "zmm-hook", "zmm-review",
            "zmm-flow", "zmm-cut", "zmm-retro", "zmm-post", "zmm-mvp", "zmm-resonate",
-           "zmm-concept"}
+           "zmm-concept", "zmm-skillify"}
 
 
 def main(root: Path) -> int:
