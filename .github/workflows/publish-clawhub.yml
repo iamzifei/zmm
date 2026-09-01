@@ -66,6 +66,7 @@ jobs:
       - name: Publish
         env:
           CLAWHUB_OWNER: zmm
+          CLAWHUB_CHANGELOG: ${{ github.event.head_commit.message }}
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             bash scripts/publish_clawhub.sh . --dry-run

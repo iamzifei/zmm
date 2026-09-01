@@ -19,7 +19,8 @@
 set -euo pipefail
 
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OWNER="${CLAWHUB_OWNER:-zmm}"   # publisher handle; skills appear as @zmm/<slug>
+OWNER="${CLAWHUB_OWNER:-zmm}"          # publisher handle; skills appear as @zmm/<slug>
+CHANGELOG="${CLAWHUB_CHANGELOG:-更新}"  # CI passes the commit message
 BUILD="${1:-}"
 DRY=0
 for a in "$@"; do [ "$a" = "--dry-run" ] && DRY=1; done
@@ -81,6 +82,7 @@ for d in "$BUILD"/skills/zmm*/; do
   slug="$(basename "${d%/}")"
   name="$(display_name "$slug")"
   ver="$(awk 'NR>1 && /^---$/{exit} /^version:/{sub(/^version: */,""); print; exit}' "$d/SKILL.md")"
+  # `ver` is only shown in the log; ClawHub picks the published version itself.
 
   if [ -z "$name" ] || [ -z "$ver" ]; then
     echo "⚠️  $slug 没有登记中文名或缺 version，跳过（请在 display_name() 里补一行）"
@@ -88,7 +90,7 @@ for d in "$BUILD"/skills/zmm*/; do
     continue
   fi
 
-  printf '%-20s → %-14s %s  ' "$slug" "$name" "$ver"
+  printf '%-20s → %-14s ' "$slug" "$name"
 
   if [ "$DRY" = "1" ]; then
     echo "[dry-run] → @$OWNER/$slug"
@@ -96,14 +98,19 @@ for d in "$BUILD"/skills/zmm*/; do
     continue
   fi
 
+  # No --version on purpose. ClawHub defaults to the next patch and reports
+  # `unchanged` when a skill's files did not move, so an ordinary push republishes
+  # only what actually changed. Pinning the frontmatter version instead made every
+  # run skip all 20 with "该版本已发过" — the pipeline was green and did nothing
+  # (measured 2026-09-01, run 33473489467).
   if clawhub skill publish "$d" \
-      --slug "$slug" --name "$name" --owner "$OWNER" --version "$ver" \
-      --changelog "首发" --tags latest >/tmp/clawhub_publish.log 2>&1; then
+      --slug "$slug" --name "$name" --owner "$OWNER" \
+      --changelog "$CHANGELOG" --tags latest >/tmp/clawhub_publish.log 2>&1; then
     echo "✅"
     ok=$((ok + 1))
   else
-    if grep -qi "already exists\|version.*exists\|duplicate" /tmp/clawhub_publish.log; then
-      echo "⏭  该版本已发过"
+    if grep -qi "unchanged\|already exists\|no changes" /tmp/clawhub_publish.log; then
+      echo "⏭  内容未变"
       ok=$((ok + 1))
     else
       echo "❌"
