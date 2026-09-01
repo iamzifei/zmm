@@ -6,6 +6,8 @@ description: |
   Resonance diagnosis, dual-mode on 5 classic communication theories. Mode A: diagnose your own draft's core resonance. Mode B: decode why someone's hit went viral and reverse-engineer the angle.
   Trigger: /zmm-resonate, "will this resonate", "why did this blow up", "decode this viral post"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-resonate
+displayName: 詹明明·戳不戳得中人
 metadata:
   openclaw:
     emoji: 📐

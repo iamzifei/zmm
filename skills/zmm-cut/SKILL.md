@@ -7,6 +7,8 @@ description: |
   Talking-head footage → publishable Douyin cut via ChatCut. Account defaults are baked in; don't re-ask them.
   Trigger: /zmm-cut, "cut this footage", "clean up the fillers", "add captions"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-cut
+displayName: 詹明明·口播剪辑
 metadata:
   openclaw:
     emoji: 📐

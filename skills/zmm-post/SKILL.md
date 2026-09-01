@@ -6,6 +6,8 @@ description: |
   WeChat OA short-post format: title ≤20 CN chars + body ≤1000 CN chars + one banner image. Title defers to /zmm-title, hook uses /zmm-hook standard, full domestic-platform red lines apply.
   Trigger: /zmm-post, "make a WeChat short post", "公众号短文"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-post
+displayName: 詹明明·公众号短文
 metadata:
   openclaw:
     emoji: 📐

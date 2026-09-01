@@ -6,6 +6,8 @@ description: |
   Cross-session tracking for commitments, expiry dates, watch-items, in-flight diagnoses, and publish queues. Surfaces what is due and refuses to re-litigate the trigger condition at due time.
   Trigger: /zmm-track, "remind me to check this later", "what's due", "where did we leave off", "save this conclusion"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-track
+displayName: 詹明明·有什么到期了
 metadata:
   openclaw:
     emoji: 📐

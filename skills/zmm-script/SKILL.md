@@ -6,6 +6,8 @@ description: |
   Collaborative koubo (talking-head) script writing: script-type selection, unit assembly, section-by-section co-writing.
   Trigger: /zmm-script, "write a talking-head script", "turn this topic into a video script"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-script
+displayName: 詹明明·口播稿写作
 metadata:
   openclaw:
     emoji: 📐

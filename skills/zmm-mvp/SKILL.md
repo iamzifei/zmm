@@ -6,6 +6,8 @@ description: |
   MVP text-testing: turn a fragment into a plain-text X post (length as the idea needs, well formatted) to cheaply validate a topic before it costs a real video.
   Trigger: /zmm-mvp, "test this idea on X", "write a short post to validate"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-mvp
+displayName: 詹明明·选题先试水
 metadata:
   openclaw:
     emoji: 📐

@@ -6,6 +6,8 @@ description: |
   Dependency checkup for owner-operators: who can unilaterally change the rules on you — platforms, landlords, licences, key people, suppliers, payment rails. Every high-risk item must carry a switching cost and switching time, or it counts as unassessed.
   Trigger: /zmm-dependency, "what if the platform changes the rules", "my landlord is raising rent", "my key person might leave", "supply got cut"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-dependency
+displayName: 詹明明·这生意靠谁
 metadata:
   openclaw:
     emoji: 📐

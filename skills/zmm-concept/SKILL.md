@@ -6,6 +6,8 @@ description: |
   Re-explain a concept the audience already uses: crack it open, hand them a ruler. Lock four things before drafting; final version comes from the host's own spoken take.
   Trigger: /zmm-concept, "explain X properly", "why does more X lead to less Y"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-concept
+displayName: 詹明明·重讲一个概念
 metadata:
   openclaw:
     emoji: 📐

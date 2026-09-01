@@ -6,6 +6,8 @@ description: |
   For owner-operators facing a fork or a stall. Three modes: decide whether to do something, dissolve the question down to what is actually being asked, or diagnose why a known task is not moving — structural causes ruled out before psychological ones.
   Trigger: /zmm-decide, "should I take this deal", "should I open a second location", "what is my actual problem", "I know what to do but can't start"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-decide
+displayName: 詹明明·拿不准的时候
 metadata:
   openclaw:
     emoji: 📐

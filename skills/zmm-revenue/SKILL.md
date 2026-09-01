@@ -6,6 +6,8 @@ description: |
   Revenue movement attribution for owner-operators. Splits any change into customer count × per-customer volume × price, so the right fix follows. Also detects slow erosion that hides inside monthly noise. Works from a ledger or order book — no dashboard required.
   Trigger: /zmm-revenue, "why is revenue down this month", "where did the money go", "business suddenly slowed"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-revenue
+displayName: 詹明明·这个月钱去哪了
 metadata:
   openclaw:
     emoji: 📐

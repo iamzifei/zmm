@@ -6,6 +6,8 @@ description: |
   Opening-hook specialist: gate-check content first, then generate hooks by expectation forms and information-gap methods.
   Trigger: /zmm-hook, "how to write the opening", "give me some hooks"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-hook
+displayName: 詹明明·开头前五秒
 metadata:
   openclaw:
     emoji: 📐

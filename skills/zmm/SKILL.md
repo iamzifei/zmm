@@ -6,6 +6,8 @@ description: |
   Single entry point for both skill sets — content (topic, script, review, retro) and business (portfolio, revenue, concentration, dependency, decisions). Three modes: guided onboarding demo, pre-task routing, post-task navigation.
   Trigger: /zmm, "make a short video", "what should I shoot today", "how do I use this"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm
+displayName: 詹明明
 metadata:
   openclaw:
     emoji: 📐

@@ -7,6 +7,8 @@ description: |
   Turn scattered experience, context and existing output into one deliverable worth paying for.
   Trigger: /zmm-product, "what should I sell", "is this actually a product", "how do I package what I know"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-product
+displayName: 詹明明·我该卖什么
 metadata:
   openclaw:
     emoji: 📐

@@ -6,6 +6,8 @@ description: |
   Pre-publish review for talking-head scripts: per-sentence information-density scoring, structure check, red-line audit. Diagnose-only by default.
   Trigger: /zmm-review, "can I publish this", "review my script"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-review
+displayName: 詹明明·发布前审一遍
 metadata:
   openclaw:
     emoji: 📐

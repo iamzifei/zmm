@@ -6,6 +6,8 @@ description: |
   Topic selection for short videos: supply-demand test, benchmark signals, real data evidence.
   Trigger: /zmm-topic, "what topic should I shoot", "is this topic worth making"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-topic
+displayName: 詹明明·今天拍什么
 metadata:
   openclaw:
     emoji: 📐

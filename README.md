@@ -39,7 +39,33 @@ npx skills add iamzifei/zmm
 它会自动认出你在用哪个工具（Claude Code、Cursor、Codex、WorkBuddy、Windsurf、Gemini CLI…），
 把 20 个技能装到对的目录。装完输入 `/新手上路`。
 
-### 方式二：从技能市场装（WorkBuddy / OpenClaw 用户）
+### 方式二：Codex（直接粘给它，让它自己装）
+
+把下面这段**整段复制**，粘进 Codex 的对话框，回车：
+
+```
+请帮我安装「詹明明 · 内容与生意工具箱」这套 AI 技能，来源是 GitHub 仓库 iamzifei/zmm。
+
+执行：npx skills add iamzifei/zmm --agent codex --yes
+
+装完确认一下 ~/.codex/skills/ 下出现了 20 个 zmm 开头的目录（zmm、zmm-topic、
+zmm-script…），然后告诉我装好了。
+```
+
+也可以自己在终端跑：
+
+```bash
+npx skills add iamzifei/zmm --agent codex
+```
+
+装到哪：全局 `~/.codex/skills/`，项目级 `.agents/skills/`。
+装完在 Codex 里说「今天拍什么」或输入 `/zmm` 都能进。
+
+> 装的是 **20 个独立技能**，这是 Codex 上正确的形态 —— 总入口 `/zmm` 能动态发现
+> 其余 19 个并按当前任务编排。（SkillHub / WorkBuddy 上是打包成一个的版本，
+> 因为那两个平台按卡片列技能。）
+
+### 方式三：从技能市场装（WorkBuddy / OpenClaw 用户）
 
 技能已上架 ClawHub，搜 **`詹明明`** 就能找到，也可以直接装：
 
@@ -52,7 +78,7 @@ npx clawhub install iamzifei/zmm-topic    # 单个技能
 
 WorkBuddy 用户在「专家·技能·连接器」里搜 `詹明明` 即可一键安装。
 
-### 方式三：WorkBuddy 手动导入（不想敲命令）
+### 方式四：WorkBuddy 手动导入（不想敲命令）
 
 WorkBuddy 是一个国内能直接用的 AI 助手客户端，装技能不用敲命令。
 
@@ -69,7 +95,7 @@ WorkBuddy 是一个国内能直接用的 AI 助手客户端，装技能不用敲
 
 > WorkBuddy 的菜单名称可能随版本变化。**找不到「技能」入口就在设置里搜「skill」**，或者直接问 WorkBuddy 自己：「我要怎么添加本地技能目录？」
 
-### 方式四：克隆仓库（会用终端、想改源码的人）
+### 方式五：克隆仓库（会用终端、想改源码的人）
 
 ```bash
 git clone https://github.com/iamzifei/zmm.git
@@ -80,7 +106,7 @@ cp config.example.yaml config.yaml
 
 然后打开 Claude Code，输入 `/新手上路`。
 
-### 方式五：其他工具手动放置
+### 方式六：其他工具手动放置
 
 这些工具大多会读一个固定的技能目录。**通用做法**：
 

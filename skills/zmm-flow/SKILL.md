@@ -6,6 +6,8 @@ description: |
   Flow / drop-off check for talking-head scripts: scan where viewers drop off — logic gaps between paragraphs, density dips within, un-speakable sentences.
   Trigger: /zmm-flow, "does this script flow", "where will viewers drop off", "check retention risk"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-flow
+displayName: 詹明明·哪里会被划走
 metadata:
   openclaw:
     emoji: 📐

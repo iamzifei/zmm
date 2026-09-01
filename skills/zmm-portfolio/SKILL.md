@@ -6,6 +6,8 @@ description: |
   Portfolio checkup for operators running several lines at once — online, info-products, e-commerce, live-selling, restaurants/retail, or factories. Identifies the real binding constraint per business type, then allocates it with a hard conservation rule: every "invest more" must name where that resource comes from.
   Trigger: /zmm-portfolio, "which product should I focus on", "should I kill this line", "spread too thin"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-portfolio
+displayName: 詹明明·该投哪条线
 metadata:
   openclaw:
     emoji: 📐

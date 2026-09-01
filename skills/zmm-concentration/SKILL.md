@@ -6,6 +6,8 @@ description: |
   Revenue concentration checkup for owner-operators: how much of your money hangs on one customer, one channel, or one product — plus months of runway if the biggest one leaves. Outputs a risk list and a do-not-touch list.
   Trigger: /zmm-concentration, "what if my biggest client leaves", "too dependent on one customer", "is my customer mix healthy"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-concentration
+displayName: 詹明明·大客户会不会跑
 metadata:
   openclaw:
     emoji: 📐

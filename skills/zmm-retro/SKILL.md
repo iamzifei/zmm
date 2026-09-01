@@ -6,6 +6,8 @@ description: |
   Post-publish retro: collect real platform data, attribute against pre-publish predictions, write validated patterns into skill memory.
   Trigger: /zmm-retro, "the numbers are in", "why did this video flop/pop"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-retro
+displayName: 詹明明·发布后复盘
 metadata:
   openclaw:
     emoji: 📐

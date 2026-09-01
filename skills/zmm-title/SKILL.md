@@ -6,6 +6,8 @@ description: |
   Multi-platform titles and cover text. Picks a structure that fits the content rather than applying a "proven formula" — cross-source testing found none of 12 common title structures replicate across differently-styled accounts. Ships a script to derive your own.
   Trigger: /zmm-title, "give me a title", "Douyin cover text", "xiaohongshu title"
   —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-title
+displayName: 詹明明·标题与封面
 metadata:
   openclaw:
     emoji: 📐
