@@ -44,6 +44,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need history to diff which skills actually changed
 
       - uses: actions/setup-node@v4
         with:
@@ -63,10 +65,29 @@ jobs:
           fi
           clawhub login --no-browser --token "$CLAWHUB_TOKEN"
 
+      # Publishing always passes an explicit --version, which means an unscoped run
+      # would cut a new version for all 20 skills even when one changed. So scope
+      # a push to the skills its diff actually touched. A manual dispatch has no
+      # diff and publishes everything on purpose.
+      - name: Work out which skills changed
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.event.before }}" ]; then
+            slugs="$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- skills/ \
+                     | cut -d/ -f2 | sort -u | paste -sd, -)"
+            echo "本次改动的技能: ${slugs:-（无）}"
+            echo "only=$slugs" >> "$GITHUB_OUTPUT"
+          else
+            echo "手动触发：发布全部"
+            echo "only=" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Publish
+        if: ${{ github.event_name != 'push' || steps.changed.outputs.only != '' }}
         env:
           CLAWHUB_OWNER: zmm
           CLAWHUB_CHANGELOG: ${{ github.event.head_commit.message }}
+          CLAWHUB_ONLY: ${{ steps.changed.outputs.only }}
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             bash scripts/publish_clawhub.sh . --dry-run

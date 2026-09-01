@@ -21,6 +21,7 @@ set -euo pipefail
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OWNER="${CLAWHUB_OWNER:-zmm}"          # publisher handle; skills appear as @zmm/<slug>
 CHANGELOG="${CLAWHUB_CHANGELOG:-更新}"  # CI passes the commit message
+ONLY="${CLAWHUB_ONLY:-}"               # optional comma-separated slug allowlist
 BUILD="${1:-}"
 DRY=0
 for a in "$@"; do [ "$a" = "--dry-run" ] && DRY=1; done
@@ -49,6 +50,23 @@ done
 # a Chinese value slugifies to nothing — all 20 skills then land in one
 # `unnamed-skill` folder and overwrite each other (measured 2026-09-01).
 # So the Chinese brand name lives here and is passed with --name at publish time.
+
+# Next patch after whatever is published, so --version can always be explicit.
+# Falls back to the frontmatter version when the skill is not published yet.
+next_version() {
+  local slug="$1" fallback="$2" cur
+  cur="$(clawhub inspect "$OWNER/$slug" --json 2>/dev/null \
+        | python3 -c "import sys,json;print(json.load(sys.stdin).get('latestVersion',{}).get('version',''))" 2>/dev/null)"
+  if [ -z "$cur" ]; then
+    echo "$fallback"
+    return
+  fi
+  python3 -c "
+import sys
+major, minor, patch = (int(x) for x in '$cur'.split('.'))
+print(f'{major}.{minor}.{patch + 1}')"
+}
+
 display_name() {
   case "$1" in
     zmm)                echo "詹明明" ;;
@@ -80,6 +98,12 @@ ok=0; fail=0; failed=()
 for d in "$BUILD"/skills/zmm*/; do
   [ -f "$d/SKILL.md" ] || continue
   slug="$(basename "${d%/}")"
+
+  # ONLY is a comma-separated allowlist. CI sets it from the push diff so an
+  # ordinary commit does not cut a new version for all 20 untouched skills.
+  if [ -n "${ONLY:-}" ] && ! printf '%s' ",$ONLY," | grep -q ",$slug,"; then
+    continue
+  fi
   name="$(display_name "$slug")"
   ver="$(awk 'NR>1 && /^---$/{exit} /^version:/{sub(/^version: */,""); print; exit}' "$d/SKILL.md")"
   # `ver` is only shown in the log; ClawHub picks the published version itself.
@@ -98,13 +122,14 @@ for d in "$BUILD"/skills/zmm*/; do
     continue
   fi
 
-  # No --version on purpose. ClawHub defaults to the next patch and reports
-  # `unchanged` when a skill's files did not move, so an ordinary push republishes
-  # only what actually changed. Pinning the frontmatter version instead made every
-  # run skip all 20 with "该版本已发过" — the pipeline was green and did nothing
-  # (measured 2026-09-01, run 33473489467).
+  # --version must be explicit. Omitting it makes ClawHub pick the next patch but
+  # ALSO drops --name, resetting the display name to the ASCII slug (measured
+  # 2026-09-01: run 33475523450 reset all 20, a manual publish with an explicit
+  # version restored them). The mechanism is unclear; the behaviour is not.
+  # So compute the next patch here and pass both.
+  next_ver="$(next_version "$slug" "$ver")"
   if clawhub skill publish "$d" \
-      --slug "$slug" --name "$name" --owner "$OWNER" \
+      --slug "$slug" --name "$name" --owner "$OWNER" --version "$next_ver" \
       --changelog "$CHANGELOG" --tags latest >/tmp/clawhub_publish.log 2>&1; then
     echo "✅"
     ok=$((ok + 1))
