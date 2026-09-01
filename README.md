@@ -44,11 +44,11 @@ npx skills add iamzifei/zmm
 技能已上架 ClawHub，搜 **`詹明明`** 就能找到，也可以直接装：
 
 ```bash
-npx clawhub install zmm/zmm          # 总入口
-npx clawhub install zmm/zmm-topic    # 单个技能
+npx clawhub install iamzifei/zmm          # 总入口
+npx clawhub install iamzifei/zmm-topic    # 单个技能
 ```
 
-全部 20 个在 **https://clawhub.ai/@zmm**。
+全部 20 个在 **https://clawhub.ai/@iamzifei**。
 
 WorkBuddy 用户在「专家·技能·连接器」里搜 `詹明明` 即可一键安装。
 

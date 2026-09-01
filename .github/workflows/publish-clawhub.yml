@@ -85,7 +85,7 @@ jobs:
       - name: Publish
         if: ${{ github.event_name != 'push' || steps.changed.outputs.only != '' }}
         env:
-          CLAWHUB_OWNER: zmm
+          CLAWHUB_OWNER: iamzifei
           CLAWHUB_CHANGELOG: ${{ github.event.head_commit.message }}
           CLAWHUB_ONLY: ${{ steps.changed.outputs.only }}
         run: |

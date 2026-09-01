@@ -19,7 +19,11 @@
 set -euo pipefail
 
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OWNER="${CLAWHUB_OWNER:-zmm}"          # publisher handle; skills appear as @zmm/<slug>
+OWNER="${CLAWHUB_OWNER:-iamzifei}"     # publisher handle; skills appear as @iamzifei/<slug>
+                                       # 2026-09-01: moved off the @zmm org so the ClawHub
+                                       # handle matches the GitHub handle SkillHub links to.
+                                       # Search still finds everything — ClawHub matches the
+                                       # slug (zmm-*), not the owner.
 CHANGELOG="${CLAWHUB_CHANGELOG:-更新}"  # CI passes the commit message
 ONLY="${CLAWHUB_ONLY:-}"               # optional comma-separated slug allowlist
 BUILD="${1:-}"
