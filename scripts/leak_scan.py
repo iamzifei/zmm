@@ -26,7 +26,10 @@ ALLOWLIST_DIRS = {".git", "node_modules", "docs/runs", "docs/reviews", "docs/pla
 
 PATTERNS = [
     # identity
-    ("作者身份", r"詹明明|詹有才|James\b|Orris|OrrisTech"),
+    # 2026-09-01 James 定：对外版本署名。IP 名「詹明明」是署名，不是泄漏。
+    # 仍然是泄漏的：真名 James（也是本机用户名，路径检测靠它）、法律实体 Orris。
+    # 旧 IP 名「詹有才」由 build_public.sh 归一成「詹明明」，公开树里不该再出现。
+    ("作者身份", r"詹有才|James\b|Orris|OrrisTech"),
     # product / repo names
     ("产品与仓库名", r"musicapi|aimusicapi|sunoapi|imaginepro|adwhiz|ccapi|orrisapi|"
                      r"letitrun|figviz|conceptviz|poseup|kolfind|askusers|clipstack"),
@@ -42,6 +45,12 @@ PATTERNS = [
     # a hardcoded cross-skill path) — install docs are expected to name it.
     ("本机路径", r"/Users/[a-z]+/|~/Dev/"),
     ("技能内硬编码路径", r"~/\.claude/skills/", ("SETUP.md", "README.md", "install.sh")),
+    # unpublished drafts. A published script is public record and may keep its
+    # number; an unpublished one identifies work that has not shipped. Zero-padded
+    # (N01-N15) and the specific unpublished two-digit numbers are listed here.
+    # Single-digit N1/N2/N3 are empirical-rule ids in 实证规律库.md, not scripts —
+    # the word boundary and the padding keep them out of this pattern.
+    ("未发布稿引用", r"\bN(?:0[1-9]|1[0-5]|17|18|21|2[4-9]|3[01])\b"),
 ]
 
 

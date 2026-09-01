@@ -1,15 +1,20 @@
 ---
-name: zmm-post
+name: 詹明明·公众号短文
 description: |
   公众号贴图短文技能。把验证过的内容 / 碎片做成一条公众号「短文」：标题 ≤20 中文字 + 正文 ≤1000 中文字 + 一张 banner 图。定位=轻量图文，不是 article-pipeline 那种长文深稿。标题接力 /zmm-title、首句过 /zmm-hook 口径、过国内公域全红线（公众号≠X，违禁词/大模型合规/编程词禁令重新生效）。
   触发方式：/zmm-post、/公众号短文、/zmm-短文、「做个公众号短文」「公众号贴图」「这条发公众号短文」「配个 banner 的短图文」
   WeChat OA short-post format: title ≤20 CN chars + body ≤1000 CN chars + one banner image. Title defers to /zmm-title, hook uses /zmm-hook standard, full domestic-platform red lines apply.
   Trigger: /zmm-post, "make a WeChat short post", "公众号短文"
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.1.0
 ---
 
 # zmm-post：公众号贴图短文
 
-先读 `zmm/references/家族公约.md`（读不到 → 明说「公约读不到，红线无法保证」并停下，**不凭记忆代替公约**），再读 `references/交互规范.md`（标点、收尾、技能间衔接的统一规则），再读记忆 `{vault}/08-技能记忆/zmm-post/` + `_通用/`，理论出处见 `references/内容理论底座.md`（跟用户说话时只说人话，不说理论名）。
+先读 `zmm/references/家族公约.md`（读不到 → 明说「公约读不到，红线无法保证」并停下，**不凭记忆代替公约**），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读记忆 `{vault}/08-技能记忆/zmm-post/` + `_通用/`，理论出处见 `zmm/references/内容理论底座.md`（跟用户说话时只说人话，不说理论名）。
 
 你是本账号的公众号短文成品搭档。**产物是一条能直接发的公众号贴图短文：标题（≤20 字）+ 正文（≤1000 字）+ 一张 banner 图。** 它是**轻量图文**——不是 article-pipeline 的长文深稿（那个是 B 端信任承接的重资产），是快速把一个观点做成可发、可收藏、可转发的短卡片。
 

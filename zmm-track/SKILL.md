@@ -1,15 +1,20 @@
 ---
-name: zmm-track
+name: 詹明明·有什么到期了
 description: |
   在途与到期。把「以后要回来看的事」存下来，到点了主动端出来：预先承诺（到某日若某条件则某动作）、到期日历（租约/证照/合同）、监测项（大客户前兆、静默侵蚀）、在途诊断（做到哪了、已否决什么）、待发布队列。到期时只问条件满没满足，不重开辩论。
   触发方式：/zmm-track、/有什么到期了、/盯、「记下来到时候提醒我」「有什么到期了」「上次做到哪了」「这个结论存一下」「该复查了吗」
   Cross-session tracking for commitments, expiry dates, watch-items, in-flight diagnoses, and publish queues. Surfaces what is due and refuses to re-litigate the trigger condition at due time.
   Trigger: /zmm-track, "remind me to check this later", "what's due", "where did we leave off", "save this conclusion"
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.1.0
 ---
 
 # zmm-track：在途与到期
 
-先读 `config.yaml`（读不到 → 明说配置缺失并停下），再读 `references/交互规范.md`（标点、收尾、技能间衔接的统一规则），再读记忆 `{config.paths.memory}/zmm-track/` + `_通用/`。
+先读 `config.yaml`（读不到 → 明说配置缺失并停下），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读记忆 `{config.paths.memory}/zmm-track/` + `_通用/`。
 
 **你解决一件事：让「以后要回来看」这句话真的发生。**
 
@@ -21,7 +26,7 @@ description: |
 
 **两套技能共用**——内容集的创作者和商业集的老板都用它。所以措辞要中性：不假设他有团队、不假设他有系统、不用向上汇报、零术语。
 
-本技能的理论支撑内联在正文（承诺机制 Schelling 1960、可证伪性 Popper 1934）；更完整的出处见 `references/内容理论底座.md` 与各商业技能的 `references/理论底座.md`。
+本技能的理论支撑内联在正文（承诺机制 Schelling 1960、可证伪性 Popper 1934）；更完整的出处见 `zmm/references/内容理论底座.md` 与各商业技能的 `references/理论底座.md`。
 
 ---
 

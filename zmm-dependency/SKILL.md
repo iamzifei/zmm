@@ -1,15 +1,20 @@
 ---
-name: zmm-dependency
+name: 詹明明·这生意靠谁
 description: |
   依赖体检：你的生意攥在谁手里。谁能单方面改规则、涨价、或者不给你了——平台、房东、牌照、关键的人、货源、收款通道。每个高危项都必须算出「换掉他要花多少钱、多久」，算不出就是没评估。
   触发方式：/zmm-dependency、/靠谁、/依赖体检、「平台改规则怎么办」「房东要涨租」「师傅要走」「断货了」「被卡脖子」「这生意到底靠谁」
   Dependency checkup for owner-operators: who can unilaterally change the rules on you — platforms, landlords, licences, key people, suppliers, payment rails. Every high-risk item must carry a switching cost and switching time, or it counts as unassessed.
   Trigger: /zmm-dependency, "what if the platform changes the rules", "my landlord is raising rent", "my key person might leave", "supply got cut"
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.1.0
 ---
 
 # zmm-dependency：依赖体检
 
-先读 `config.yaml`（读不到 → 明说配置缺失并停下，不用示例值假装是用户的设定），再读 `references/交互规范.md`（标点、收尾、技能间衔接的统一规则），再读记忆 `{config.paths.memory}/zmm-dependency/` + `_通用/`。
+先读 `config.yaml`（读不到 → 明说配置缺失并停下，不用示例值假装是用户的设定），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读记忆 `{config.paths.memory}/zmm-dependency/` + `_通用/`。
 
 **你只回答一个问题：这门生意，攥在谁手里。**
 
@@ -191,7 +196,32 @@ description: |
 ## 现在做什么
 - 立刻做：{一件，今天能做完}
 - 本月做：{一件}
+
+## 下一步（回数字就行）
+1. {分叉一} —— {为什么}
+2. {分叉二} —— {为什么}
+3. 都不是，我想 {___}
 ```
+
+### 🔴 收尾：三件套怎么落在这份报告上（2026-08-29 加）
+
+按 `zmm/references/交互规范.md` §四。**不要在报告之外再套一遍**，逐条对上：
+
+| §四 要的 | 报告里已有的 | 还要不要另写 |
+|---|---|---|
+| **Recap** | **「一句话结论」** | ❌ 已经是了 |
+| **Before/After** | 🔴 **没有** | ✅ 补一句：**「没做这轮你大概会盯着 {他本来担心的那个}；做完之后最危险的其实是 {实际结论}」**。<br>⚠️ 如果结论和他本来想的一样，就直说「这轮确认了你原本的判断，没有推翻什么」——**确认本身也是价值，但要说实话**（§四 三条硬约束） |
+| **下一步编号选项** | 🔴 **「现在做什么」是处方，不是选项** —— 我告诉他做什么，不是他挑 | ✅ 补，见下 |
+
+**下一步那三条要是「这份报告的分叉」，不是依赖本身的处置动作**（那已经在「现在做什么」里了）：
+
+```
+1. 到期日历存进 /zmm-track —— 租约证照是唯一能提前知道的风险时点，存了才会到期自己回来找你
+2. 就最危险那一项往下做 —— {那一项} 的切换成本还没算出来，不算出来就等于没评估
+3. 未评估项里有一条我其实知道 —— 说出来，能把它从「不知道」挪进清单
+```
+
+🔴 **有明显推荐项就标出来并说明理由**，不要假装中立。
 
 **「到期日历」是这份报告里最容易被低估的一栏。** 租约和证照的到期日是**唯一能提前知道的风险时点**，写下来就等于把一类突发变成了可计划。
 

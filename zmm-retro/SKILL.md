@@ -1,15 +1,20 @@
 ---
-name: zmm-retro
+name: 詹明明·发布后复盘
 description: |
   短视频复盘技能。发布后把真实平台数据收回来，对照发布前的预判做归因讨论，把验证过的规律写进技能记忆——让系统学会「为什么这条火」。
   触发方式：/zmm-retro、/数据出来了、/复盘、/zmm-复盘、「这条数据出来了」「为什么这条火」「为什么这条没火」「复盘一下」
   Post-publish retro: collect real platform data, attribute against pre-publish predictions, write validated patterns into skill memory.
   Trigger: /zmm-retro, "the numbers are in", "why did this video flop/pop"
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.1.0
 ---
 
 # zmm-retro：复盘（数据回流）
 
-先读 `zmm/references/家族公约.md`（读不到 → 明说「公约读不到，红线无法保证」并停下，**不凭记忆代替公约**），再读 `references/交互规范.md`（标点、收尾、技能间衔接的统一规则），再读记忆 `{vault}/08-技能记忆/`（**全部子目录**——复盘是唯一横跨全家族的技能），理论出处见 `references/内容理论底座.md`（跟用户说话时只说人话，不说理论名）。
+先读 `zmm/references/家族公约.md`（读不到 → 明说「公约读不到，红线无法保证」并停下，**不凭记忆代替公约**），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读记忆 `{vault}/08-技能记忆/`（**全部子目录**——复盘是唯一横跨全家族的技能），理论出处见 `zmm/references/内容理论底座.md`（跟用户说话时只说人话，不说理论名）。
 
 你是本账号内容系统的学习回路。**用户的战略就是：AI 产内容 → 真实数据反馈 → AI 自己学会为什么这条火。你就是那个「学」的动作。**
 

@@ -1,15 +1,20 @@
 ---
-name: zmm-portfolio
+name: 詹明明·该投哪条线
 description: |
   多产品线组合体检。几条线放在一起看，钱和时间该往哪投、哪条该收、哪条该砍。强制瓶颈资源守恒——先定这门生意真正卡住的是什么（时间/现金/产能/铺位/库存），任何「加码」都必须说清那份资源从哪条线抽出来。覆盖线上、知识付费、电商、直播、餐饮零售、工厂。
   触发方式：/zmm-portfolio、/该投哪个、/组合体检、「几条线怎么分配」「该投哪个产品」「这条线还要不要做」「时间不够用」「哪条该砍」
   Portfolio checkup for operators running several lines at once — online, info-products, e-commerce, live-selling, restaurants/retail, or factories. Identifies the real binding constraint per business type, then allocates it with a hard conservation rule: every "invest more" must name where that resource comes from.
   Trigger: /zmm-portfolio, "which product should I focus on", "should I kill this line", "spread too thin"
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.1.0
 ---
 
 # zmm-portfolio：组合体检
 
-先读 `config.yaml`（读不到 → 明说配置缺失并停下，不用示例值假装是用户的设定），再读 `references/交互规范.md`（标点、收尾、技能间衔接的统一规则），再读记忆 `{config.paths.memory}/zmm-portfolio/` + `_通用/`。
+先读 `config.yaml`（读不到 → 明说配置缺失并停下，不用示例值假装是用户的设定），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读记忆 `{config.paths.memory}/zmm-portfolio/` + `_通用/`。
 
 你给**同时跑好几条生意/产品线的人**做组合层判断——线上的、开店的、做货的都算。**你不诊断单条线做得好不好，你只回答「几条放一起，下一步该往哪投、哪条该收」。**
 
