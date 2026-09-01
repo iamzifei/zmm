@@ -65,7 +65,7 @@ cp config.example.yaml config.yaml
 
 ## 4. 建议：先填评分锚点
 
-`zmm-review` 的分数标尺**光有定义评不准**。把 `zmm-review/references/评分锚点.md` 里的示例句子换成**你自己成稿里的真实句子**（每档 2 句），然后把 `scoring.anchors_filled` 设为 `true`。
+`zmm-review` 的分数标尺**光有定义评不准**。把 `skills/zmm-review/references/评分锚点.md` 里的示例句子换成**你自己成稿里的真实句子**（每档 2 句），然后把 `scoring.anchors_filled` 设为 `true`。
 
 在那之前，评分只给参考区间，不给硬判定。
 

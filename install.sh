@@ -36,7 +36,8 @@ fi
 mkdir -p "$TARGET"
 
 n=0
-for d in "$REPO"/zmm*/; do
+# Skills live under skills/ so skills.sh can discover this repo.
+for d in "$REPO"/skills/zmm*/; do
   [ -f "$d/SKILL.md" ] || continue
   name="$(basename "$d")"
   ln -sfn "${d%/}" "$TARGET/$name"

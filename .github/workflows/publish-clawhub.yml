@@ -1,0 +1,48 @@
+# Publish every changed skill to ClawHub on push.
+#
+# This file lives in the PUBLIC repo only. It is copied there by
+# scripts/build_public.sh — it must never sit at .github/workflows/ in the
+# private repo, or a private push would publish from the wrong tree.
+#
+# Chain (verified 2026-09-01):
+#   iamzifei/zmm ──push──┬─▶ skills.sh   auto-discovers the repo, no registration
+#                        └─▶ ClawHub     this workflow
+#                              └─▶ SkillHub (Tencent) mirrors ClawHub
+#
+# Setup, one time and only James can do it:
+#   Settings → Secrets and variables → Actions → New repository secret
+#   Name: CLAWHUB_TOKEN   Value: from clawhub.ai → Settings → API tokens
+#
+# The reusable workflow skips skills whose files did not change, so an ordinary
+# push republishes only what actually moved. Do not add global `categories` or
+# `topics` inputs here: they suspend that skip and cut a new patch version of
+# all 20 skills on every run.
+
+name: Publish to ClawHub
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview without publishing
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@main
+    with:
+      owner: zmm
+      root: skills
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+      changelog: ${{ github.event.head_commit.message }}
+    secrets:
+      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
