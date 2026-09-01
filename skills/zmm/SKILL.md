@@ -1,7 +1,7 @@
 ---
-name: 詹明明
+name: zmm
 description: |
-  两套技能的总入口：做内容（选题/写稿/审核/复盘）+ 看生意（组合体检/营收归因/客户集中度/依赖风险/拿不准的决策）。三种模式：新手上路演示、任务前路由、任务后导航。不知道用哪个就回这里。
+  📐 詹明明 ——两套技能的总入口：做内容（选题/写稿/审核/复盘）+ 看生意（组合体检/营收归因/客户集中度/依赖风险/拿不准的决策）。三种模式：新手上路演示、任务前路由、任务后导航。不知道用哪个就回这里。
   触发方式：/zmm、/新手上路、/zmm 教程、「做条视频」「出个口播」「今天拍什么」「内容下一步怎么走」；新手教程：/zmm 新手、「这个怎么用」「第一次用，带我走一遍」
   Single entry point for both skill sets — content (topic, script, review, retro) and business (portfolio, revenue, concentration, dependency, decisions). Three modes: guided onboarding demo, pre-task routing, post-task navigation.
   Trigger: /zmm, "make a short video", "what should I shoot today", "how do I use this"

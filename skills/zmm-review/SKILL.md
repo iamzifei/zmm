@@ -1,7 +1,7 @@
 ---
-name: 詹明明·发布前审一遍
+name: zmm-review
 description: |
-  口播稿发布前审核技能。逐句信息密度评分（60/80 分线）+ 结构检查 + 红线五查 + 口播友好度，默认只诊断不改。
+  📐 詹明明·发布前审一遍 ——口播稿发布前审核技能。逐句信息密度评分（60/80 分线）+ 结构检查 + 红线五查 + 口播友好度，默认只诊断不改。
   触发方式：/zmm-review、/能不能发、/审核、/zmm-审核、「这稿子能不能发」「帮我审一下」「过一遍红线」「信息密度够不够」
   Pre-publish review for talking-head scripts: per-sentence information-density scoring, structure check, red-line audit. Diagnose-only by default.
   Trigger: /zmm-review, "can I publish this", "review my script"

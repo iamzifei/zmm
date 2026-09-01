@@ -1,7 +1,7 @@
 ---
-name: 詹明明·口播剪辑
+name: zmm-cut
 description: |
-  口播成片剪辑技能（调用 ChatCut）。把拍好的口播素材剪成可发布的抖音成片：语音剪辑（去口癖/停顿/重复）→ 加速 → 字幕 → 交付。
+  📐 詹明明·口播剪辑 ——口播成片剪辑技能（调用 ChatCut）。把拍好的口播素材剪成可发布的抖音成片：语音剪辑（去口癖/停顿/重复）→ 加速 → 字幕 → 交付。
   詹明明账号的默认参数已固化在本技能里（抖音 · 保持原长 · 1.15× · 紧凑有力 · HarmonyOS Sans 粗体字幕 · 黄色 #FFE20A 高亮），**不需要用户每次重说**。
   触发方式：/zmm-cut、/剪辑、/剪片、/zmm-剪、「把这条剪出来」「素材剪成成片」「去口癖」「加字幕」「这条视频剪一下」
   Talking-head footage → publishable Douyin cut via ChatCut. Account defaults are baked in; don't re-ask them.

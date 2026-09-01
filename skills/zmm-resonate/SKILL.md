@@ -1,7 +1,7 @@
 ---
-name: 詹明明·戳不戳得中人
+name: zmm-resonate
 description: |
-  共鸣诊断技能，双模式共用 5 个经典传播学理论。模式A 诊断自己的草稿有没有刺中核心（防「写得全面但没戳中人」）；模式B 拆一条别人的爆款为什么能火，反推可借的选题角度。与 zmm-review 正交：review 防句废，resonate 防结构散。
+  📐 詹明明·戳不戳得中人 ——共鸣诊断技能，双模式共用 5 个经典传播学理论。模式A 诊断自己的草稿有没有刺中核心（防「写得全面但没戳中人」）；模式B 拆一条别人的爆款为什么能火，反推可借的选题角度。与 zmm-review 正交：review 防句废，resonate 防结构散。
   触发方式：/zmm-resonate、/戳不戳人、/共鸣、/zmm-共鸣、「这稿有没有戳中人」「会不会没人看」「这条为什么能火」「拆一下这个爆款」「受众到底想听什么」「这个现象值不值得讲」「我觉得不对劲但说不明白」「帮我把这个问题讲大」
   Resonance diagnosis, dual-mode on 5 classic communication theories. Mode A: diagnose your own draft's core resonance. Mode B: decode why someone's hit went viral and reverse-engineer the angle.
   Trigger: /zmm-resonate, "will this resonate", "why did this blow up", "decode this viral post"

@@ -1,7 +1,7 @@
 ---
-name: 詹明明·口播稿写作
+name: zmm-script
 description: |
-  口播稿协作写作技能（知识付费口播为主形态）。三类脚本选型 + 从内容单元装配 + 逐段共创，不一键成稿。
+  📐 詹明明·口播稿写作 ——口播稿协作写作技能（知识付费口播为主形态）。三类脚本选型 + 从内容单元装配 + 逐段共创，不一键成稿。
   触发方式：/zmm-script、/写口播、/写稿、/zmm-写稿、「写个口播稿」「帮我把这个题写出来」「知识付费口播」「写条视频文案」
   Collaborative koubo (talking-head) script writing: script-type selection, unit assembly, section-by-section co-writing.
   Trigger: /zmm-script, "write a talking-head script", "turn this topic into a video script"

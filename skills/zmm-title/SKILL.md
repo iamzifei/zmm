@@ -1,7 +1,7 @@
 ---
-name: 詹明明·标题与封面
+name: zmm-title
 description: |
-  多平台标题与封面。按内容本身的形状选结构（12 种结构清单），过卖真 / 违禁词 / 不点名 / 黑话红线，每个标题说清用了什么结构、为什么配这条内容。**不给「通用爆款公式」——实证显示标题结构在不同账号间不通用，附脚本让你算出自己账号的规律。**
+  📐 詹明明·标题与封面 ——多平台标题与封面。按内容本身的形状选结构（12 种结构清单），过卖真 / 违禁词 / 不点名 / 黑话红线，每个标题说清用了什么结构、为什么配这条内容。**不给「通用爆款公式」——实证显示标题结构在不同账号间不通用，附脚本让你算出自己账号的规律。**
   触发方式：/zmm-title、/封面、/标题、/zmm-标题、「起个标题」「抖音封面写什么」「小红书标题」「封面大字怎么写」「帮我优化这个标题」
   Multi-platform titles and cover text. Picks a structure that fits the content rather than applying a "proven formula" — cross-source testing found none of 12 common title structures replicate across differently-styled accounts. Ships a script to derive your own.
   Trigger: /zmm-title, "give me a title", "Douyin cover text", "xiaohongshu title"

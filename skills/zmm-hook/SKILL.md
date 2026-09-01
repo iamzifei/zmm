@@ -1,7 +1,7 @@
 ---
-name: 詹明明·开头前五秒
+name: zmm-hook
 description: |
-  短视频开头专项技能。先诊断内容有没有货（门禁），再按期待感三形式 + 信息缺口四法出候选，每个候选标注用了哪个原理。
+  📐 詹明明·开头前五秒 ——短视频开头专项技能。先诊断内容有没有货（门禁），再按期待感三形式 + 信息缺口四法出候选，每个候选标注用了哪个原理。
   触发方式：/zmm-hook、/钩子、/开头、/zmm-开头、「开头怎么写」「前五秒抓不住人」「帮我想几个钩子」「这个开头行不行」
   Opening-hook specialist: gate-check content first, then generate hooks by expectation forms and information-gap methods.
   Trigger: /zmm-hook, "how to write the opening", "give me some hooks"

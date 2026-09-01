@@ -2,6 +2,9 @@
 
 > 不给公式，给判据。每条规则都标了实测代价。
 
+[![skills.sh](https://skills.sh/b/iamzifei/zmm)](https://skills.sh/iamzifei/zmm)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2T024VDBG)
 
 两套 AI 技能，装完说「**詹明明**」或输入 `/zmm` 就能进总入口：

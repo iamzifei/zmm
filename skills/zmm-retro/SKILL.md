@@ -1,7 +1,7 @@
 ---
-name: 詹明明·发布后复盘
+name: zmm-retro
 description: |
-  短视频复盘技能。发布后把真实平台数据收回来，对照发布前的预判做归因讨论，把验证过的规律写进技能记忆——让系统学会「为什么这条火」。
+  📐 詹明明·发布后复盘 ——短视频复盘技能。发布后把真实平台数据收回来，对照发布前的预判做归因讨论，把验证过的规律写进技能记忆——让系统学会「为什么这条火」。
   触发方式：/zmm-retro、/数据出来了、/复盘、/zmm-复盘、「这条数据出来了」「为什么这条火」「为什么这条没火」「复盘一下」
   Post-publish retro: collect real platform data, attribute against pre-publish predictions, write validated patterns into skill memory.
   Trigger: /zmm-retro, "the numbers are in", "why did this video flop/pop"

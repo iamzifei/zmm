@@ -1,7 +1,7 @@
 ---
-name: 詹明明·今天拍什么
+name: zmm-topic
 description: |
-  短视频选题技能。交互式选题：供需判定 + 对标信号 + 本人真实数据佐证 + 配比检查，不一键生成选题清单。
+  📐 詹明明·今天拍什么 ——短视频选题技能。交互式选题：供需判定 + 对标信号 + 本人真实数据佐证 + 配比检查，不一键生成选题清单。
   触发方式：/zmm-topic、/拍什么、/选题、/zmm-选题、「今天拍什么」「帮我出选题」「这个题能不能做」「有个想法你帮我判断下」「这个题太平了」「帮我找冲突」「这个话题怎么讲得更有意思」
   Topic selection for short videos: supply-demand test, benchmark signals, real data evidence.
   Trigger: /zmm-topic, "what topic should I shoot", "is this topic worth making"

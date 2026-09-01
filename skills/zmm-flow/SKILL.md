@@ -1,7 +1,7 @@
 ---
-name: 詹明明·哪里会被划走
+name: zmm-flow
 description: |
-  口播稿「逻辑衔接与划走」专项。逐段扫描观众会在哪一秒划走：段间逻辑断裂、段内信息密度掉、句子念不出口。诊断完默认主动问是否标记式改稿。
+  📐 詹明明·哪里会被划走 ——口播稿「逻辑衔接与划走」专项。逐段扫描观众会在哪一秒划走：段间逻辑断裂、段内信息密度掉、句子念不出口。诊断完默认主动问是否标记式改稿。
   触发方式：/zmm-flow、/会不会划走、/顺稿、/zmm-顺稿、「这稿子顺不顺」「哪里会划走」「逻辑有没有断」「读起来卡不卡」「完播会不会掉」
   Flow / drop-off check for talking-head scripts: scan where viewers drop off — logic gaps between paragraphs, density dips within, un-speakable sentences.
   Trigger: /zmm-flow, "does this script flow", "where will viewers drop off", "check retention risk"
