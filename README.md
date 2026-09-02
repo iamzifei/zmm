@@ -37,7 +37,7 @@ npx skills add iamzifei/zmm
 ```
 
 它会自动认出你在用哪个工具（Claude Code、Cursor、Codex、WorkBuddy、Windsurf、Gemini CLI…），
-把 20 个技能装到对的目录。装完输入 `/新手上路`。
+把 22 个技能装到对的目录。装完输入 `/新手上路`。
 
 ### 方式二：Codex（直接粘给它，让它自己装）
 
@@ -48,7 +48,7 @@ npx skills add iamzifei/zmm
 
 执行：npx skills add iamzifei/zmm --agent codex --yes
 
-装完确认一下 ~/.codex/skills/ 下出现了 20 个 zmm 开头的目录（zmm、zmm-topic、
+装完确认一下 ~/.codex/skills/ 下出现了 22 个 zmm 开头的目录（zmm、zmm-topic、
 zmm-script…），然后告诉我装好了。
 ```
 
@@ -61,13 +61,13 @@ npx skills add iamzifei/zmm --agent codex
 装到哪：全局 `~/.codex/skills/`，项目级 `.agents/skills/`。
 装完在 Codex 里说「今天拍什么」或输入 `/zmm` 都能进。
 
-> 装的是 **20 个独立技能**，这是 Codex 上正确的形态 —— 总入口 `/zmm` 能动态发现
-> 其余 19 个并按当前任务编排。（SkillHub / WorkBuddy 上是打包成一个的版本，
+> 装的是 **22 个独立技能**，这是 Codex 上正确的形态 —— 总入口 `/zmm` 能动态发现
+> 其余 21 个并按当前任务编排。（SkillHub / WorkBuddy 上是打包成一个的版本，
 > 因为那两个平台按卡片列技能。）
 
-### 方式三：豆包 / WorkBuddy（用打包版，一次导入 20 个）
+### 方式三：豆包 / WorkBuddy（用打包版，一次导入 22 个）
 
-这两个平台按「卡片」列技能，所以另外提供了**一个包含全部 20 个技能的打包版**。
+这两个平台按「卡片」列技能，所以另外提供了**一个包含全部 22 个技能的打包版**。
 
 **第 1 步**　到 [Releases](https://github.com/iamzifei/zmm/releases/latest) 下载 **`zmm-toolbox.zip`**（不用解压）
 
@@ -85,11 +85,11 @@ npx skills add iamzifei/zmm --agent codex
 
 **WorkBuddy 用户**：专家·技能·连接器 → 添加技能 → 上传本地技能包，选同一个 zip。
 
-> **为什么这两个平台不用 20 个平铺**：20 张卡片分不清哪个是入口；
-> 而且只装总入口的话，成员没装、编排是空的。打包版里 20 个技能都在包内，
+> **为什么这两个平台不用 22 个平铺**：22 张卡片分不清哪个是入口；
+> 而且只装总入口的话，成员没装、编排是空的。打包版里 22 个技能都在包内，
 > 总入口按当前任务动态挑，不是固定流程。
 >
-> Claude Code / Codex / Cursor 等**不要用这个 zip** —— 那些工具用方式一的 20 个平铺更好。
+> Claude Code / Codex / Cursor 等**不要用这个 zip** —— 那些工具用方式一的 22 个平铺更好。
 
 ### 方式四：从技能市场装（WorkBuddy / OpenClaw 用户）
 
@@ -100,7 +100,7 @@ npx clawhub install iamzifei/zmm          # 总入口
 npx clawhub install iamzifei/zmm-topic    # 单个技能
 ```
 
-全部 20 个在 **https://clawhub.ai/@iamzifei**。
+全部 22 个在 **https://clawhub.ai/@iamzifei**。
 
 WorkBuddy 用户在「专家·技能·连接器」里搜 `詹明明` 即可一键安装。
 
@@ -224,7 +224,7 @@ cp config.example.yaml config.yaml
 
 ---
 
-## 📐 詹明明·内容操盘手（14 个技能）
+## 📐 詹明明·内容操盘手（15 个技能）
 
 给单人自采自编的知识型创作者。**主路径只有三步：**
 
@@ -240,6 +240,7 @@ cp config.example.yaml config.yaml
 |---|---|
 | **内容操盘手**<br>`zmm` | 入口：路由 + 导航 + 新手教程 |
 | **今天拍什么**<br>`zmm-topic` | 选题：三条路（把判断走到死路 / 从事件找争点 / 借别人的题换自己的芯）+ 供需判定、认知落差、真实数据佐证 |
+| **找对标**<br>`zmm-benchmark` | 找对标：给方向就去搜人，给名字就去认人；三筛过滤（赚钱 / 看懂 / 能仿）之后，把他**最早 10 条 · 数据最好 10 条 · 最新 10 条**全扒下来做拆解。**爆款批强制配全量分母**——只看 TOP 榜单归纳成功要素，是只研究飞回来的飞机 |
 | **重讲一个概念**<br>`zmm-concept` | 重讲一个大家都在用的概念（定价 / 选题 / 需求 / 转化 / 获客…）——拆开它，从裂缝里长出一把尺子。先锁四样再写稿，最后由本人口述定稿 |
 | **做成一个技能**<br>`zmm-skillify` | 把这次会话里**已经跑通**的做法固化成一个新技能。门禁很硬：没做完的、没验证过的、不会再发生的，一律不给固化 —— 固化没验证的经验等于把猜测写成规则 |
 | **口播稿写作**<br>`zmm-script` | 写稿：从素材装配、逐段共创；也可只要开头 / 只要标题 |

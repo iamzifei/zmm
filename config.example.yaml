@@ -121,6 +121,7 @@ paths:
   published: "_已发布"
   topic_pipeline: "06-选题装配/选题管道.md"
   test_pipeline: "06-选题装配/X测试管道.md"
+  benchmark: "01-原始素材区"    # zmm-benchmark 扒下来的对标账号落在这里
   memory: "08-技能记忆"
   tracking: "09-在途"        # zmm-track 的存放位置(承诺/到期/监测/在途/队列)
   empirical: "zmm/references/实证规律库.md"

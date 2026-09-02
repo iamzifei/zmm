@@ -19,7 +19,7 @@ import re
 import sys
 from pathlib import Path
 
-CONTENT = {"zmm", "zmm-topic", "zmm-script", "zmm-title", "zmm-hook", "zmm-review",
+CONTENT = {"zmm", "zmm-topic", "zmm-benchmark", "zmm-script", "zmm-title", "zmm-hook", "zmm-review",
            "zmm-flow", "zmm-cut", "zmm-retro", "zmm-post", "zmm-mvp", "zmm-resonate",
            "zmm-concept", "zmm-skillify"}
 

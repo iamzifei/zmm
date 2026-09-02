@@ -75,6 +75,7 @@ display_name() {
   case "$1" in
     zmm)                echo "詹明明" ;;
     zmm-topic)          echo "詹明明·今天拍什么" ;;
+    zmm-benchmark)      echo "詹明明·找对标" ;;
     zmm-script)         echo "詹明明·口播稿写作" ;;
     zmm-title)          echo "詹明明·标题与封面" ;;
     zmm-hook)           echo "詹明明·开头前五秒" ;;

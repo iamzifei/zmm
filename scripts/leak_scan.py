@@ -38,8 +38,12 @@ PATTERNS = [
     # money
     ("金额", r"\$\s?\d[\d,]{2,}|月流水|六位数美金|\d{4,}\s*(?:美金|美元|刀)"),
     # infrastructure identifiers
+    # An env-var NAME carries no secret and setup docs must be able to print it
+    # ("put TIKHUB_API_KEY in ~/.env"). What leaks is a VALUE assigned to one, so
+    # the key-name pattern only fires when an actual key-shaped value follows.
     ("账号与密钥", r"acct_[A-Za-z0-9]|sk-[A-Za-z0-9]|pk_[A-Za-z0-9]|"
-                   r"[A-Z_]{3,}_API_KEY|GEMINI_API_KEY|Bearer\s+[A-Za-z0-9]"),
+                   r"[A-Z_]{3,}_API_KEY\s*[:=]\s*['\"]?[A-Za-z0-9][A-Za-z0-9_.\-]{11,}|"
+                   r"Bearer\s+[A-Za-z0-9]"),
     # local machine paths. `~/.claude/skills/` is the standard install location and
     # carries no identity, so it is only a leak inside a skill body (where it would be
     # a hardcoded cross-skill path) — install docs are expected to name it.
@@ -80,7 +84,10 @@ def main():
     total = 0
     files = 0
     for root in roots:
-        targets = [root] if root.is_file() else sorted(root.rglob("*.md")) + sorted(root.rglob("*.yaml"))
+        # .py is scanned too: the published tree ships helper scripts, and those
+        # are exactly the files that touch ~/.env and API keys.
+        targets = [root] if root.is_file() else sorted(
+            f for pat in ("*.md", "*.yaml", "*.py") for f in root.rglob(pat))
         for f in targets:
             rel = f.relative_to(root) if not root.is_file() else f
             if f.name in ALLOWLIST:
