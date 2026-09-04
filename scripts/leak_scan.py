@@ -87,7 +87,7 @@ def main():
         # .py is scanned too: the published tree ships helper scripts, and those
         # are exactly the files that touch ~/.env and API keys.
         targets = [root] if root.is_file() else sorted(
-            f for pat in ("*.md", "*.yaml", "*.py") for f in root.rglob(pat))
+            f for pat in ("*.md", "*.yaml", "*.py", "*.sh") for f in root.rglob(pat))
         for f in targets:
             rel = f.relative_to(root) if not root.is_file() else f
             if f.name in ALLOWLIST:
