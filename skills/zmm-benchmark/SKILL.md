@@ -11,12 +11,14 @@ displayName: 詹明明·找对标
 metadata:
   openclaw:
     emoji: 📐
-version: 0.1.0
+version: 0.2.0
 ---
 
 # zmm-benchmark：找对标
 
 先读 `config.yaml`（读不到 → 明说配置缺失并停下），再读 `zmm/references/家族公约.md`，再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读 `{config.paths.empirical}`（实证规律库 —— **本技能的硬规矩 2 就是从它的 N1 长出来的，不读等于没依据**），最后读记忆 `{config.paths.memory}/zmm-benchmark/` + `_通用/`。
+
+本技能内置判据在 `references/规则卡.md`（判据 / 为什么 / 怎么查 / 强度），开工前读一遍；`{vault}` 里有对应的规则文件时以 vault 为准、规则卡为底。
 
 判据细则见 `references/三筛判据.md`；怎么抓、怎么注册、有什么风险见 `references/抓取手册.md`。
 

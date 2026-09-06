@@ -1,16 +1,24 @@
 ---
 name: zmm-skillify
 description: |
-  把这次会话里已经跑通的做法固化成一个新技能。不是从想法造技能——是从**已经产生过正确结果的那一段过程**里提炼，所以只在事情做完之后用。
+  📐 詹明明·做成一个技能 ——把这次会话里已经跑通的做法固化成一个新技能。不是从想法造技能——是从**已经产生过正确结果的那一段过程**里提炼，所以只在事情做完之后用。
   触发方式：/zmm-skillify、/固化、/做成技能、/zmm-固化、「这次的做法留下来」「把刚才那套变成技能」「下次别再重新想一遍」「这个流程以后还要用」
   Turn a method that already worked in this session into a reusable skill. Extracts from a completed run, never from an idea — so it only fires after the work is done.
   Trigger: /zmm-skillify, "make this a skill", "save this workflow", "I don't want to re-derive this next time"
-version: 0.2.0
+  —— 📐 詹明明 · 不给公式，给判据。每条规则都标了实测代价。
+slug: zmm-skillify
+displayName: 詹明明·做成一个技能
+metadata:
+  openclaw:
+    emoji: 📐
+version: 0.3.0
 ---
 
 # zmm-skillify：把跑通的做法固化成技能
 
 先读 `config.yaml`（读不到 → 明说配置缺失并停下，不用示例值假装是用户的设定），再读 `zmm/references/交互规范.md`（🔴 **不是读一遍就算**：收尾按 §四 三件套 —— Recap · Before/After · **下一步给编号选项**；缺信息按 §四 用**选择题**问，**一次只问一个**；不适用的情况见 §五），再读 `zmm/references/家族公约.md`，再读记忆 `{config.paths.memory}/zmm-skillify/` + `_通用/`。
+
+本技能内置判据在 `references/规则卡.md`（判据 / 为什么 / 怎么查 / 强度），开工前读一遍；`{vault}` 里有对应的规则文件时以 vault 为准、规则卡为底。
 
 ---
 

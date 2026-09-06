@@ -173,6 +173,12 @@ def main() -> int:
         candidates = [paths[key]] if (key and paths.get(key)) else ticks
         for p in candidates:
             target = resolve(p, vault)
+            # a wildcard row (`zmm-*/references/规则卡.md`) passes when it matches at least one file
+            if "*" in p:
+                base = REPO if is_repo_relative(p) else vault
+                if any(base.glob(p)):
+                    ok += 1
+                    continue
             if target.exists():
                 ok += 1
             else:
