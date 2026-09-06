@@ -110,7 +110,7 @@ platforms:
     name: "抖音"
     domestic_public: true        # true = 国内公域，全套红线生效
     title_limit: 20
-    cover_text_limit: 6
+    cover_text_limit: 6            # 封面大字每行的字数上限（不是总字数）
     format: "口播视频"
   - id: xiaohongshu
     name: "小红书"

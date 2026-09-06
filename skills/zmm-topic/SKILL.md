@@ -11,7 +11,7 @@ displayName: 詹明明·今天拍什么
 metadata:
   openclaw:
     emoji: 📐
-version: 0.3.0
+version: 0.3.1
 ---
 
 # zmm-topic：选题
