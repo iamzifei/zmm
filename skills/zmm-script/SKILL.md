@@ -11,7 +11,7 @@ displayName: 詹明明·口播稿写作
 metadata:
   openclaw:
     emoji: 📐
-version: 0.3.1
+version: 0.3.2
 ---
 
 # zmm-script：口播写稿
