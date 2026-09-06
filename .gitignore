@@ -1,0 +1,4 @@
+# Your filled-in config stays local — it holds your IP name, red lines and paths.
+config.yaml
+
+.DS_Store

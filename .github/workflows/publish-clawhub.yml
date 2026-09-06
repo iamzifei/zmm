@@ -1,0 +1,96 @@
+# Publish every skill to ClawHub on push.
+#
+# This file lives in the PUBLIC repo only. scripts/build_public.sh copies it
+# there — it must never sit at .github/workflows/ in the private repo, or a
+# private push would publish from the wrong tree.
+#
+# Chain (verified 2026-09-01):
+#   iamzifei/zmm ──push──┬─▶ skills.sh   installs straight from this repo
+#                        └─▶ ClawHub     this workflow
+#                              └─▶ SkillHub (Tencent) mirrors ClawHub
+#
+# Why this runs our own script instead of ClawHub's reusable workflow:
+# that workflow passes neither --name nor --slug, so the ClawHub display name
+# falls back to the frontmatter `name`. `name` has to stay an ASCII slug —
+# skills.sh derives the install directory from it, and a Chinese value slugifies
+# to nothing, dropping all 20 skills into one `unnamed-skill` folder where they
+# overwrite each other (measured 2026-09-01). Our script keeps the Chinese
+# display names in its own table and passes them with --name.
+#
+# One-time setup, repo owner only:
+#   Settings → Secrets and variables → Actions → New repository secret
+#   Name: CLAWHUB_TOKEN   Value: clawhub.ai → Settings → API tokens
+
+name: Publish to ClawHub
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview without publishing
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need history to diff which skills actually changed
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install ClawHub CLI
+        run: npm i -g clawhub@latest
+
+      - name: Authenticate
+        if: ${{ !inputs.dry_run }}
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: |
+          if [ -z "$CLAWHUB_TOKEN" ]; then
+            echo "::error::缺 CLAWHUB_TOKEN。到仓库 Settings → Secrets and variables → Actions 添加。"
+            exit 1
+          fi
+          clawhub login --no-browser --token "$CLAWHUB_TOKEN"
+
+      # Publishing always passes an explicit --version, which means an unscoped run
+      # would cut a new version for all 20 skills even when one changed. So scope
+      # a push to the skills its diff actually touched. A manual dispatch has no
+      # diff and publishes everything on purpose.
+      - name: Work out which skills changed
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.event.before }}" ]; then
+            slugs="$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- skills/ \
+                     | cut -d/ -f2 | sort -u | paste -sd, -)"
+            echo "本次改动的技能: ${slugs:-（无）}"
+            echo "only=$slugs" >> "$GITHUB_OUTPUT"
+          else
+            echo "手动触发：发布全部"
+            echo "only=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish
+        if: ${{ github.event_name != 'push' || steps.changed.outputs.only != '' }}
+        env:
+          CLAWHUB_OWNER: iamzifei
+          CLAWHUB_CHANGELOG: ${{ github.event.head_commit.message }}
+          CLAWHUB_ONLY: ${{ steps.changed.outputs.only }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            bash scripts/publish_clawhub.sh . --dry-run
+          else
+            bash scripts/publish_clawhub.sh .
+          fi
