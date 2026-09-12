@@ -11,10 +11,12 @@ displayName: 詹明明·重讲一个概念
 metadata:
   openclaw:
     emoji: 📐
-version: 0.3.1
+version: 0.4.0
 ---
 
 # zmm-concept：重讲一个概念
+
+**Phase 1 锁第 3 样理论前**，读 `zmm/references/理论框架选型与装配.md` §1–4，先比较确实不同的解释，再按已有「锁四样」评分、核实和确认。§5 映射并入一页纸，不另加审批；概念仍须提供可迁移判断，不能以哲学标签代替定义。
 
 先读 `zmm/references/家族公约.md`（读不到 → 明说「公约读不到，红线无法保证」并停下，**不凭记忆代替公约**），
 
